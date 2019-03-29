@@ -53,7 +53,7 @@ namespace myfirstasp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Fullname,Department,Email,Phone")] employee employee)
+        public async Task<IActionResult> Create([Bind("Id,Fullname,Department,Email,Phone,Address")] employee employee)
         {
             if (ModelState.IsValid)
             {
@@ -85,7 +85,7 @@ namespace myfirstasp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Fullname,Department,Email,Phone")] employee employee)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Fullname,Department,Email,Phone,Address")] employee employee)
         {
             if (id != employee.Id)
             {
